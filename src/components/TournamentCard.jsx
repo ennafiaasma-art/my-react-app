@@ -7,6 +7,7 @@ export default function TournamentCard({ tournament })  {
        <div className="bg-white p-4 rounded-xl shadow mt-4">
 
       <div className="flex justify-between items-center">
+        
         <h2 className="font-semibold">{tournament.title}</h2>
         <StatusBadge status={tournament.status} />
 
