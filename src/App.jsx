@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import Input from "./components/Input.jsx";
 import TournamentCard from "./components/TournamentCard.jsx";
 import { tournamentData } from "./data/tournamentDB";
+import RegistrationForm from "./components/RegistrationForm .jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             tournament={tournament}
           />
         ))}
+        <RegistrationForm/>
       </div>
     </div>
   );
