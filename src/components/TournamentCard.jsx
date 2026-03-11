@@ -6,24 +6,7 @@ import { useState } from 'react';
 
 export default function TournamentCard({ tournament })  {
   const [isregisterd,setisregisterd]=useState(false);
-  function inscrire(){
-    return(
-      <button className=' px-3 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full'>iscrire</button>
-    )
-  }
-  function deconnexion(){
-    return(
-      <button className=' px-3 py-1 text-xs font-semibold text-white bg-red-500 rounded-full'>deconnexion</button>
-    )
-  }
-  function changeColor(){
-    return
-    <>
-    
-    
-    
-    </>
-  }
+ 
 
 
 
@@ -48,8 +31,13 @@ export default function TournamentCard({ tournament })  {
         <p>📅 {tournament.date}</p>
         <p>📍 {tournament.location}</p>
       </div>
-      <button className='px-3 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full'  onClick={setisregisterd(isregisterd=!false)}>me inscrire</button>
-
+        <button
+        className={`px-3 py-1 text-xs font-semibold text-white rounded-full
+           ${ isregisterd ? "bg-red-500" : "bg-blue-700" }`}
+        onClick={() => setisregisterd(!isregisterd)}>
+        {isregisterd ? "deconnexion" : "me inscrire"}
+      </button>
+      
 
     </div>
   );
