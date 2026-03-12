@@ -35,19 +35,17 @@ export default function TournamentCard({ tournament })  {
         <p>📅 {tournament.date}</p>
         <p>📍 {tournament.location}</p>
       </div>
-        <button
-        className={`px-3 py-1 text-xs font-semibold text-white rounded-full
-           ${ isregisterd ? "bg-red-500" : "bg-gray-500" }`}
-        onClick={() => setisregisterd(!isregisterd)}>
-        {isregisterd ? "deconnexion" : "me inscrire"}
-        
-        
-                
+        {!isregisterd && (
+  <button
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    onClick={() => setisregisterd(true)} 
+  >
+    Me inscrire
+  </button>
+)}
 
-      </button>
-        {isregisterd && (<RegistrationForm/>) }
-        
-      
+
+{isregisterd && <RegistrationForm />}
 
     </div>
   );
