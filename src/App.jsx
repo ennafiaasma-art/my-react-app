@@ -6,6 +6,7 @@ import { tournamentData } from "./data/tournamentDB";
 import RegistrationForm from "./components/RegistrationForm .jsx";
 
 function App() {
+  
   return (
     <div>
       <Header />

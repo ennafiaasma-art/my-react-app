@@ -2,7 +2,6 @@ import { useState } from "react"
 export default function RegistrationForm() {
      const [nom,setnom]=useState("");
      const [Equipe,setEquipe]=useState("");
-    //  const[nomvalider,setnomvalider]=useState([A-Za-z])
   return (
    
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
@@ -22,14 +21,15 @@ export default function RegistrationForm() {
             type="text"
             id="nom"
             name="nom"
-            minLength={3}
-            maxLength={8}
+           
             value={nom}
             onChange={(e)=>setnom(e.target.value)}
+          
             
             placeholder="Entrer votre nom"
             className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
+          <p>{nom.length < 3 ? "remplir tous les champs" : ""}</p>
         </div>
 
       
@@ -71,7 +71,7 @@ export default function RegistrationForm() {
         <button
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
-          
+           disabled={nom.length < 3}
         >
           Envoyer
         </button>
