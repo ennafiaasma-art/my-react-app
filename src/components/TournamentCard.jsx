@@ -1,6 +1,7 @@
 
 import StatusBadge from './StatusBadge';
 import { useState } from 'react';
+import RegistrationForm from './RegistrationForm ';
 
 
 
@@ -21,6 +22,9 @@ export default function TournamentCard({ tournament })  {
 
       </div>
 
+
+     
+
       <p className="text-gray-500 text-sm mt-2">
         {tournament.description}
       </p>
@@ -33,10 +37,13 @@ export default function TournamentCard({ tournament })  {
       </div>
         <button
         className={`px-3 py-1 text-xs font-semibold text-white rounded-full
-           ${ isregisterd ? "bg-red-500" : "bg-blue-700" }`}
+           ${ isregisterd ? "bg-red-500" : "bg-gray-500" }`}
         onClick={() => setisregisterd(!isregisterd)}>
         {isregisterd ? "deconnexion" : "me inscrire"}
+                
+
       </button>
+      {isregisterd && (<RegistrationForm/>) }
       
 
     </div>

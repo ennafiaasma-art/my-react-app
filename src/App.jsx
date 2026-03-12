@@ -18,7 +18,8 @@ function App() {
             tournament={tournament}
           />
         ))}
-        <RegistrationForm/>
+       
+
       </div>
     </div>
   );

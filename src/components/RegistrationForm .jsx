@@ -2,6 +2,7 @@ import { useState } from "react"
 export default function RegistrationForm() {
      const [nom,setnom]=useState("");
      const [Equipe,setEquipe]=useState("");
+    //  const[nomvalider,setnomvalider]=useState([A-Za-z])
   return (
    
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
@@ -21,8 +22,11 @@ export default function RegistrationForm() {
             type="text"
             id="nom"
             name="nom"
+            minLength={3}
+            maxLength={8}
             value={nom}
             onChange={(e)=>setnom(e.target.value)}
+            
             placeholder="Entrer votre nom"
             className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
@@ -37,8 +41,10 @@ export default function RegistrationForm() {
             type="text"
             id="equipe"
             name="equipe"
+            minLength={3}
+            maxLength={8}
              value={Equipe}
-            onChange={(e)=>setEquipe(e.Equipe.value)}
+            onChange={(e)=>setEquipe(e.target.value)}
             placeholder="Nom de l'équipe"
             className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
