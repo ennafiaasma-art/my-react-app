@@ -1,11 +1,25 @@
- export default function Input(){
-    return(
-    <div className={"my-5 bg-blue-400 flex   justify-center items-center rounded-lg"}>
-<input type="text"required placeholder="search !"  className={"px-7 py-3 border-2 border-black  rounded-full py-3 px-6  md:rounded-full  md:w-full"}/>
+ export default function Input() {
+  return (
+    <div className="my-5 flex justify-center">
+      
+      <div className="relative w-full max-w-md">
+        
+     
+        <input
+          type="text"
+          required
+          placeholder="Search..."
+          className="w-full px-12 py-3 border border-gray-300 rounded-full 
+          focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
+        />
 
+      
+        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+          🔍
+        </span>
 
+      </div>
 
-
-
-  </div>)
+    </div>
+  );
 }

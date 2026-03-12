@@ -1,11 +1,30 @@
-export default function Header(){
-    return(
-        <header className={"flex justify-around items-center "}>
-       <h1   className={"text-white"}> good morning !  <br /> asma ennafia </h1>
-    <img src="bell-regular-full.svg" alt="nothification"  className={"w-16 h-16"}/>
-    <img src="imgd.jpg" alt="profile"   className={"rounded-full flex  items-center justify-center  h-16 w-16 "}/>
+export default function Header() {
+  return (
+    <header className="flex items-center justify-between bg-blue-500 px-6 py-3 shadow-md">
+      
+    
+      <div className="text-white">
+        <h1 className="text-lg font-semibold">
+          Good morning!
+        </h1>
+        <p className="text-sm opacity-80">Asma Ennafia</p>
+      </div>
 
     
-</header>
-    )
+      <div className="flex items-center gap-4">
+        <img
+          src="bell-regular-full.svg"
+          alt="notification"
+          className="w-7 h-7 cursor-pointer hover:scale-110 transition"
+        />
+
+        <img
+          src="imgd.jpg"
+          alt="profile"
+          className="w-12 h-12 rounded-full object-cover border-2 border-white"
+        />
+      </div>
+
+    </header>
+  );
 }

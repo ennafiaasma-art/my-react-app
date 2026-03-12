@@ -40,13 +40,17 @@ export default function TournamentCard({ tournament })  {
            ${ isregisterd ? "bg-red-500" : "bg-gray-500" }`}
         onClick={() => setisregisterd(!isregisterd)}>
         {isregisterd ? "deconnexion" : "me inscrire"}
+        
+        
                 
 
       </button>
-      {isregisterd && (<RegistrationForm/>) }
+        {isregisterd && (<RegistrationForm/>) }
+        
       
 
     </div>
   );
   
 }
+    
