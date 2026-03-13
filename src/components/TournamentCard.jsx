@@ -2,11 +2,13 @@
 import StatusBadge from './StatusBadge';
 import { useState } from 'react';
 import RegistrationForm from './RegistrationForm ';
+import TournamentDetails from './TournamentDetails ';
 
 
 
 export default function TournamentCard({ tournament })  {
   const [isregisterd,setisregisterd]=useState(false);
+  const [detail,setdetail]=useState(false);
  
 
 
@@ -18,7 +20,7 @@ export default function TournamentCard({ tournament })  {
       <div className="flex justify-between items-center">
         
         <h2 className="font-semibold">{ tournament.title}</h2>
-        <StatusBadge status={tournament.status} />
+        <StatusBadge  status={tournament.status} />
 
       </div>
 
@@ -46,9 +48,15 @@ export default function TournamentCard({ tournament })  {
 
 
 {isregisterd && <RegistrationForm />}
+ <button className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+ onClick={()=>setdetail(true)}
+>detail</button>
+
+{detail && <TournamentDetails/>}
 
     </div>
-  );
+
+     );
   
 }
     
