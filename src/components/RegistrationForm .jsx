@@ -2,12 +2,12 @@ import { useState } from "react"
 export default function RegistrationForm() {
      const [nom,setnom]=useState("");
      const [Equipe,setEquipe]=useState("");
-     
+
   return (
    
-    <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
+   
       
-      <form className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md space-y-4">
+      <form className="bg-gray-300 p-6 rounded-xl shadow-lg w-full max-w-md space-y-4">
         
         <h2 className="text-2xl font-bold text-center text-gray-700">
           Inscription Joueur
@@ -31,7 +31,7 @@ export default function RegistrationForm() {
             className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <p>{nom.length < 3 ? "remplir tous les champs" : ""}</p>
-        </div>
+        </div>  
 
       
         <div>
@@ -79,6 +79,6 @@ export default function RegistrationForm() {
         
 
       </form>
-    </div>
+  
   );
 }

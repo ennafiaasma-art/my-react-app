@@ -1,21 +1,33 @@
+import StatusBadge from "./StatusBadge";
 
+const participants = [
+  { id: "u1", name: "Ethan Miller", status: "Pending", avatar: "https://i.pravatar.cc/150?u=u1" },
+  { id: "u2", name: "Noah Smith", status: "Confirmed", avatar: "https://i.pravatar.cc/150?u=u2" },
+  { id: "u3", name: "James Anderson", status: "Confirmed", avatar: "https://i.pravatar.cc/150?u=u3" },
+  { id: "u4", name: "David Hall", status: "Confirmed", avatar: "https://i.pravatar.cc/150?u=u4" }
+];
 
 export default function TournamentDetails() {
   return (
     <>
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-3">
-          <img
-            src="https://i.pravatar.cc/150?u=u5"
-            className="w-10 h-10 rounded-full"
-          />
-          <span className="font-medium">Aiden Davis</span>
-        </div>
+      {participants.map((participant, index) => {
+        return (
+          <div key={index} className="flex items-center justify-between mb-3">
+            
+            <div className="flex items-center gap-3">
+              <img
+                src={participant.avatar}
+                className="w-10 h-10 rounded-full"
+                alt="player"
+              />
+              <span className="font-medium">{participant.name}</span>
+            </div>
 
-        <span className="text-xs px-3 py-1 rounded-full bg-yellow-400 text-white">
-          Pending
-        </span>
-      </div>
+            <StatusBadge status={participant.status} />
+
+          </div>
+        );
+      })}
     </>
   );
 }

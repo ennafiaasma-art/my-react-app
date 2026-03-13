@@ -36,7 +36,49 @@ export default function TournamentCard({ tournament })  {
         <p>🏆 {tournament.type}</p>
         <p>📅 {tournament.date}</p>
         <p>📍 {tournament.location}</p>
+
+
+        {/* l'ajoute de boutton de details */}
       </div>
+      {!detail||(
+  <button
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    onClick={() => setdetail(false)} 
+  >
+    detail
+  </button>
+
+
+
+)}
+      {!detail&&(
+       <button className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-green-400"
+ onClick={()=>setdetail(true)}
+>detail</button>)}
+
+
+
+
+{detail && <TournamentDetails/>}
+
+
+
+
+
+{/*  ajoutre de boutton inscrire */}
+
+
+{!isregisterd||(
+  <button
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    onClick={() => setisregisterd(false)} 
+  >
+    Me inscrire
+  </button>
+
+
+
+)}
         {!isregisterd && (
   <button
     className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
@@ -48,11 +90,8 @@ export default function TournamentCard({ tournament })  {
 
 
 {isregisterd && <RegistrationForm />}
- <button className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
- onClick={()=>setdetail(true)}
->detail</button>
 
-{detail && <TournamentDetails/>}
+
 
     </div>
 
