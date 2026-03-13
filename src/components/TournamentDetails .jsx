@@ -1,4 +1,4 @@
-import { tournamentData } from "./data/tournamentDB";
+
 
 export default function TournamentDetails() {
   return (

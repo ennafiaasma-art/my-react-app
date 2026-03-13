@@ -2,6 +2,7 @@ import { useState } from "react"
 export default function RegistrationForm() {
      const [nom,setnom]=useState("");
      const [Equipe,setEquipe]=useState("");
+     
   return (
    
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-4">
