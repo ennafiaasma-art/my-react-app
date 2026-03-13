@@ -2,6 +2,7 @@ import { useState } from "react"
 export default function RegistrationForm() {
      const [nom,setnom]=useState("");
      const [Equipe,setEquipe]=useState("");
+    //  const[niveau,setniveau]=useState("")
 
   return (
    
@@ -42,8 +43,7 @@ export default function RegistrationForm() {
             type="text"
             id="equipe"
             name="equipe"
-            minLength={3}
-            maxLength={8}
+          
              value={Equipe}
             onChange={(e)=>setEquipe(e.target.value)}
             placeholder="Nom de l'équipe"
@@ -59,6 +59,8 @@ export default function RegistrationForm() {
           <select
             id="niveau"
             name="niveau"
+            // value={niveau}
+            // onChange={(e).setniveau(e.target.value)}
             className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Choisir le niveau</option>
@@ -73,6 +75,7 @@ export default function RegistrationForm() {
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
            disabled={nom.length < 3}
+           
         >
           Envoyer
         </button>

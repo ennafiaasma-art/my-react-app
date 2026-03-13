@@ -40,9 +40,10 @@ export default function TournamentCard({ tournament })  {
 
         {/* l'ajoute de boutton de details */}
       </div>
+     
       {!detail||(
   <button
-    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500 gap-4"
     onClick={() => setdetail(false)} 
   >
     detail
@@ -52,7 +53,7 @@ export default function TournamentCard({ tournament })  {
 
 )}
       {!detail&&(
-       <button className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-green-400"
+       <button className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-green-400 gap-5"
  onClick={()=>setdetail(true)}
 >detail</button>)}
 
@@ -70,7 +71,7 @@ export default function TournamentCard({ tournament })  {
 
 {!isregisterd||(
   <button
-    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500 gap-5"
     onClick={() => setisregisterd(false)} 
   >
     Me inscrire
@@ -81,7 +82,7 @@ export default function TournamentCard({ tournament })  {
 )}
         {!isregisterd && (
   <button
-    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500"
+    className="px-3 py-1 text-xs font-semibold text-white rounded-full bg-gray-500 gap-5"
     onClick={() => setisregisterd(true)} 
   >
     Me inscrire
@@ -94,6 +95,7 @@ export default function TournamentCard({ tournament })  {
 
 
     </div>
+   
 
      );
   
